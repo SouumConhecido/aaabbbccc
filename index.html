@@ -5,30 +5,73 @@
 	  <meta name="viewport" content="width=device-width">
 	  <title>Debs</title>
 	  <style>
-	  html {
-		height: 100%;
-		width: 100%;
-	  }
-	  body {
-		margin: 0px;
-      }
-	  .container {
-	    display: flex;
-	    width: 300px;
-	    margin: 10px;
-	    padding: 10px;
-	    background-color: #f0f0f0;
-	    border: 1px solid black;
-	    border-radius: 8px;
-        justify-content: center;
-	  </style>
+			html {
+				height: 100%;
+				width: 100%;
+			}
+			body {
+				margin: 0px;
+			}
+			.container, .botao {
+				display: flex;
+				width: 300px;
+				margin: 10px;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: 1px solid black;
+				border-radius: 8px;
+				justify-content: center;
+			}
+			.container2 {
+				display: none;
+				width: 300px;
+				margin: 10px;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: 1px solid black;
+				border-radius: 8px;
+				justify-content: center;
+			}
+			p {
+				width: auto;
+				height: auto;
+				margin: 5px;
+				padding: 0px;
+			}
+			.botao {
+				width: 50px;
+				font-size: 20px;
+				background-color: white;
+				transition: background-color 0.3s;
+			}
+			.botao:hover {
+				background-color: #f0f0f0;
+				transition: background-color 0.3s;
+
+		</style>
 	</head>
 
 	<body>
 		<center>
 			<div class="container">
-				Bom dia, Débora, não irei contar quem sou, mas você saberá ao decorrer do texto. Eu sou um admirador secreto e te amo, ou melhor, amava. A razão para este "amava" é que eu perdi a maior parte desses sentimentos no decorrer do conflito mais recente que você teve com uma pessoa específica, que era eu. E agora? Sabe quem sou? Enfim, queria dizer que não tinha intenções de causar desconforto ou de te deixar se sentindo invadida. Não estava me fingindo de besta ao responder "ok, tenha um bom dia" às suas ofensas, e sim, eu sabia o que eu estava fazendo, tudo o que eu queria era me aproximar de você e conhecê-la melhor. Você é uma pessoa incrível e merece que alguém te conheça mais profundamente em um modo romântico, embora essa pessoa não possa ser eu. Eu acabei arruinando tudo por não conversar com você e ao não pedir sua opinião. Então, se você se sentir culpada, saiba que a culpa também é parte minha. Se você quiser conversar comigo sobre isso, fazer as pazes ou quiser tirar mais alguma dúvida sobre como eu me sinto, pode vir conversar comigo pessoalmente ou no privado pelo Whatsapp, se preferir. Agora, para encerrar esta curta carta, que não pode expressar meus sentimentos na sua totalidade, tenha um bom dia e sempre siga em frente com sua vida.<br><br> Com respeito,<br>Seu admirador secreto.
+				Bom dia, Débora, não irei contar quem sou, mas você saberá ao decorrer do texto. Eu sou um admirador secreto e te amo, ou melhor, amava. A razão para este "amava" é que eu perdi a maior parte desses sentimentos no decorrer do conflito mais recente que você teve com uma pessoa específica, que era eu. E agora? Sabe quem sou? Enfim, queria dizer que não tinha intenções de causar desconforto ou de te deixar se sentindo invadida. Não estava me fingindo de besta ao responder "ok, tenha um bom dia" às suas ofensas, e sim, eu sabia o que eu estava fazendo, tudo o que eu queria era me aproximar de você e conhecê-la melhor. Você é uma pessoa incrível e merece que alguém te conheça mais profundamente em um modo romântico, embora essa pessoa não possa ser eu. Eu acabei arruinando tudo por não conversar com você e ao não pedir sua opinião. Então, se você se sentir culpada, saiba que a culpa também é parte minha. Se você quiser conversar comigo sobre isso, fazer as pazes ou quiser tirar mais alguma dúvida sobre como eu me sinto, pode vir conversar comigo pessoalmente ou no privado pelo Whatsapp, se preferir. Agora, para encerrar esta curta carta, que não pode expressar meus sentimentos na sua totalidade, tenha um bom dia e sempre siga em frente com sua vida.<br><br>Com respeito,<br>Seu admirador secreto.
 			</div>
+			<div class="container2" id = mensagem>
+				Você leu a minha carta! E não, não foram suas amigas que a escreveram. E como alguém que previamente te amava, não tem porquê eu mentir. Talvez você já tenha uma ideia de quem sou, mas  vou falar um pouco mais sobre nós.<br><br>Houveram várias coisas entre nós, algumas fizeram meus sentimentos se aprofundarem, como quando você se aproximou de mim e falou que queria me mostrar uma "coisa interessante". Curioso sobre o que você poderia me mostrar, aceitei sua proposta, e você acabou mostrando uma frase em inglês, que para sua infelicidade estava errada. Tentei explicar o erro de forma gentil e respeitosa, tentando colocar uma fonte para dizer que não fui eu quem comprovou que era um erro. Eu tenho nível C2 em inglês, então eu já sabia da maior parte das coisas que você havia me mostrado, mas achei adorável como você veio me "ensinar" algo que você achava legal de maneira tão espontânea. E também, você parecia nervosa e com medo de errar, então esperei pacientemente você me contar o que queria. Eu também notei que você se aproximou de mim e parou por algum tempo para criar coragem antes da pergunta. Acho que agora com essa dica adicional você poderá inferir quem sou com maior facilidade; não quero ver você se irritar tentando achar alguém em uma semana que ocorrerá duas provas estaduais e até mesmo uma formatura.
+			</div>
+			<div class="botao" onclick="mensagem()"><p id="seta">↓</p></div>
 		</center>
+		<script> function mensagem() {
+var mensagem = document.getElementById("mensagem");
+	var seta = document.getElementById("seta")
+	if(mensagem.style.display == "none") {
+	mensagem.style.display = "flex";
+		seta.innerHTML = "↑";
+	} else {
+	mensagem.style.display = "none";
+		seta.innerHTML = "↓";
+	}
+}
+	</script>
 	</body>
 </html>
